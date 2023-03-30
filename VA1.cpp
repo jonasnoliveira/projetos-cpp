@@ -1,27 +1,46 @@
 #include <iostream>
 #include <cmath>
 
-#define PI 3.14159
-
 using namespace std;
 
-double calculateAreaCircle(double radius) {
-    if (radius < 0) {
-        cout << "O raio deve ser um valor positivo." << endl;
-        return 0.0;
-    }
-    return PI * pow(radius, 2);
+#define va1 std::cout << "Parabens voce concluiu a VA1" << endl;
+
+float mathFunction(int x)
+{
+  return pow(x, 2) - 3 * x - 5;
 }
 
-int main() {
-    double radius;
-    cout << "Digite o valor do raio do círculo: ";
-    cin >> radius;
-    
-    double area = calculateAreaCircle(radius);
-    if (area > 0) {
-        cout << "A área do círculo é: " << area << endl;
+int main()
+{
+  const string functionFormula = "Formula: x^2-3x-5";
+  const string mensage = "O valor da funcao ";
+  float x;
+
+  cout << functionFormula << endl;
+  cout << "Digite o valor de x: \n";
+  cin >> x;
+
+  if (mathFunction(x) > 10 && mathFunction(x) <= 30)
+  {
+    cout << mensage << "esta entre 10 e 30" << endl;
+  }
+  else if (mathFunction(x) >= 0 || mathFunction(x) >= 30)
+  {
+    if (mathFunction(x) < 10)
+    {
+      cout << mensage << "esta abaixo de 10" << endl;
     }
-    
-    return 0;
+    else
+    {
+      cout << mensage << "esta acima de 30" << endl;
+    }
+  }
+  else if (mathFunction(x) < 0)
+  {
+    cout << mensage << "e um numero negativo" << endl;
+  }
+
+  va1;
+
+  return 0;
 }
