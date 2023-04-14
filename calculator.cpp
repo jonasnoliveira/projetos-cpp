@@ -39,7 +39,7 @@ int main()
     result = number1 / number2;
     break;
   case '*':
-    result = number2 * number2;
+    result = number1 * number2;
     break;
   }
 
