@@ -5,32 +5,32 @@ using namespace std;
 
 int main()
 {
-    int countAlunos;
+    int countStudents;
 
     cout << "Digite a quantidade de alunos: ";
-    cin >> countAlunos;
+    cin >> countStudents;
 
-    string nomeAlunos[countAlunos];
-    double notaAlunos[countAlunos];
+    string nameStudents[countStudents];
+    double notaAlunos[countStudents];
 
-    string *ponteiroNomeAlunos[countAlunos];
-    double *ponteiroNotaAlunos[countAlunos];
+    string *pointerNameStudents[countStudents];
+    double *pointerNoteStudents[countStudents];
 
-    for (size_t i = 0; i < countAlunos; i++)
+    for (size_t i = 0; i < countStudents; i++)
     {
         cout << "Digite o nome do aluno:" << endl;
-        cin >> nomeAlunos[i];
-        ponteiroNomeAlunos[i] = &nomeAlunos[i];
+        cin >> nameStudents[i];
+        pointerNameStudents[i] = &nameStudents[i];
 
         cout << "Digite a nota do aluno:" << endl;
         cin >> notaAlunos[i];
-        ponteiroNotaAlunos[i] = &notaAlunos[i];
+        pointerNoteStudents[i] = &notaAlunos[i];
     }
 
-    for (size_t i = 0; i < countAlunos; i++)
+    for (size_t i = 0; i < countStudents; i++)
     {
-        cout << "Valor da memoria do ponteiro do nome de " << nomeAlunos[i] << " e: " << ponteiroNomeAlunos[i] << endl;
-        cout << "Valor da memoria do ponteiro da nota de " << nomeAlunos[i] << " e: " << ponteiroNotaAlunos[i] << "e o seu valor e: " << *ponteiroNotaAlunos[i] << endl;
+        cout << "Valor da memoria do ponteiro do nome de " << nameStudents[i] << " e: " << pointerNameStudents[i] << endl;
+        cout << "Valor da memoria do ponteiro da nota de " << nameStudents[i] << " e: " << pointerNoteStudents[i] << "e o seu valor e: " << *pointerNoteStudents[i] << endl;
     }
 
     return 0;
